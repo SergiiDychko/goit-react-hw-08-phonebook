@@ -1,14 +1,13 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { change } from '../../redux/slice';
+import { change } from '../../redux/contacts/slice';
 
 import { StyledInput } from './Styles';
-
 
 const SearchInput = () => {
   const filter = useSelector(state => state.filter);
   const dispatch = useDispatch();
-  
-  const handleChange = (evt) => dispatch(change(evt.target.value));
+
+  const handleChange = evt => dispatch(change(evt.target.value));
 
   return (
     <StyledInput>

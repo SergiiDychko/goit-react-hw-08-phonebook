@@ -4,9 +4,11 @@ export const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 480px;
   margin: 0 auto;
-
+  .title {
+    font-size: 24px;
+    text-align: center;
+  }
   .labelTitle {
     font-size: 24px;
     white-space: nowrap;
@@ -18,7 +20,7 @@ export const StyledForm = styled.form`
   }
   .inputTag {
     height: 35px;
-    width: 100%;
+    width: 70%;
     border: 2px solid lightgray;
     border-radius: 6px;
     font-size: 18px;

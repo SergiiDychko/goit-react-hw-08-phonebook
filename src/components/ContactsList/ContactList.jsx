@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchContacts, deleteContact } from '../../redux/operations';
+import { fetchContacts, deleteContact } from '../../redux/contacts/operations';
 
 import ContactItem from './ContactItem';
 import { StyledList } from './Styles';
@@ -14,7 +14,9 @@ const ContactList = () => {
   const loading = useSelector(state => state.isLoading);
   const dispatch = useDispatch();
 
-  useEffect(() => {dispatch(fetchContacts())}, [dispatch])
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
 
   const filteredContacts = () =>
     contacts.filter(contact =>
@@ -27,22 +29,22 @@ const ContactList = () => {
     <>
       {loading && Loader}
       {contactsList.length ? (
-      <StyledList>
-        {contactsList.map(({ id, name, phone }) => (
-          <li className="listItem" key={id}>
-            <ContactItem name={name} number={phone} />
-            <Button
-              title="Delete"
-              onClick={() => dispatch(deleteContact(id))}
-            />
-          </li>
-        ))}
-      </StyledList>
+        <StyledList>
+          {contactsList.map(({ id, name, phone }) => (
+            <li className="listItem" key={id}>
+              <ContactItem name={name} number={phone} />
+              <Button
+                title="Delete"
+                onClick={() => dispatch(deleteContact(id))}
+              />
+            </li>
+          ))}
+        </StyledList>
       ) : (
-      <Notification
-        text={filter ? 'Could not find this name' : 'Contact list is empty'}
-      />
-      )};
+        <Notification
+          text={filter ? 'Could not find this name' : 'Contact list is empty'}
+        />
+      )}
     </>
   );
 };

@@ -1,22 +1,27 @@
 import './App.css';
-import ContactForm from './ContactForm/';
-import ContactList from './ContactsList/';
-import SearchInput from './SearchInput/';
-import Section from './Section';
+
+import { lazy } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import SharedLayout from '../components/SharedLayout';
+
+const HomePage = lazy(() => import('../pages/Home'));
+const Phonebook = lazy(() => import('../pages/Phonebook'));
+const LoginPage = lazy(() => import('../pages/Login'));
+const RegistrationPage = lazy(() => import('../pages/Registration'));
+
 
 const App = () => {
-
   return (
-    <>
-      <Section title="Phonebook">
-        <ContactForm />
-      </Section>
-      <Section title="Contacts">
-        <SearchInput />
-        <ContactList />
-      </Section>
-    </>
+    <Routes>
+      <Route path="/" element={<SharedLayout />}>
+        <Route index element={<HomePage />} />
+        <Route path="/phonebook" element={<Phonebook />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegistrationPage />} />
+        <Route path="*" element={<HomePage />} />
+      </Route>
+    </Routes>
   );
-}
+};
 
 export default App;

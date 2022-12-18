@@ -6,17 +6,17 @@ export const StyledContact = styled.div`
   .contactName {
     display: block;
     width: 60%;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
   }
   .contactNumber {
     width: 40%;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     color: darkgreen;
   }
   .contactNumber:hover {
     color: darkseagreen;
     text-decoration: underline;
   }
-`;
+`
