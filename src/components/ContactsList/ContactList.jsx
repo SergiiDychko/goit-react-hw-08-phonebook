@@ -30,9 +30,9 @@ const ContactList = () => {
       {loading && Loader}
       {contactsList.length ? (
         <StyledList>
-          {contactsList.map(({ id, name, phone }) => (
+          {contactsList.map(({ id, name, number }) => (
             <li className="listItem" key={id}>
-              <ContactItem name={name} number={phone} />
+              <ContactItem name={name} number={number} />
               <Button
                 title="Delete"
                 onClick={() => dispatch(deleteContact(id))}

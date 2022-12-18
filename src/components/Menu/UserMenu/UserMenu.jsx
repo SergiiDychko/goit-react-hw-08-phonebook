@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { logout } from '../../redux/auth/operations';
+import { logout } from '../../../redux/auth/operations';
 import { StyledUserMenu } from './Styles';
 
 const UserMenu = () => {

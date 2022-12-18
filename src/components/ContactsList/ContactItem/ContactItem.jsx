@@ -7,7 +7,6 @@ const ContactItem = ({name, number}) => {
         <a className="contactNumber" href={'tel:' + number}>
           {number}
         </a>
-
       </StyledContact>
     );
 }

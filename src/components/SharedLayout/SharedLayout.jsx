@@ -2,9 +2,9 @@ import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import Loader from '../Loader';
 import { Container, Header, Link } from './Styles';
-import Navigation from "../Navigation";
-import UserMenu from "../UserMenu";
-import AuthNav from "../AuthNav";
+import Navigation from "../Menu/Navigation";
+import UserMenu from '../Menu/UserMenu';
+import AuthNav from "../Menu/AuthNav";
 import { useSelector } from 'react-redux';
 
 const SharedLayout = () => {
