@@ -5,12 +5,12 @@ export const StyledContact = styled.div`
   width: 100%;
   .contactName {
     display: block;
-    width: 60%;
+    width: 50%;
     font-size: 16px;
     font-weight: 500;
   }
   .contactNumber {
-    width: 40%;
+    width: 50%;
     text-decoration: none;
     font-size: 16px;
     color: darkgreen;
