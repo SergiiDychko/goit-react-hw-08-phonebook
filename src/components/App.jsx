@@ -1,7 +1,7 @@
 import './App.css';
 
 import { lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, createBrowserRouter } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { refreshUser } from '../redux/auth/operations';
@@ -13,7 +13,6 @@ const HomePage = lazy(() => import('../pages/Home'));
 const Phonebook = lazy(() => import('../pages/Phonebook'));
 const LoginPage = lazy(() => import('../pages/Login'));
 const RegistrationPage = lazy(() => import('../pages/Registration'));
-
 
 const App = () => {
   const dispatch = useDispatch();
