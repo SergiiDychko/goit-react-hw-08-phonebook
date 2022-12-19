@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import Loader from '../Loader';
-import { Container, Header, Link } from './Styles';
+import { Container, Header } from './Styles';
 import Navigation from "../Menu/Navigation";
 import UserMenu from '../Menu/UserMenu';
 import AuthNav from "../Menu/AuthNav";
